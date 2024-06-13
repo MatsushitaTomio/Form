@@ -10,7 +10,7 @@ body{
     width: 100%;
     min-height: 100vh;
     display: flex;
-    justify-content: c enter;
+    justify-content: center;
     align-items: center;
 }
 
@@ -25,7 +25,7 @@ body{
 }
 
 .header {
-    background: linear-gradient(120deg, #3acbf0, #8bb0ff 100%);
+    background: linear-gradient(120deg, #1367c7, #7ea5f9 100%);
     padding: 24px;
     text-align: center;
     color: #FFF;
