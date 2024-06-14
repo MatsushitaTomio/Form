@@ -1,4 +1,6 @@
 const form = document.getElementById("form");
+const firstName = document.getElementById("fname");
+const lastName = document.getElementById("lname");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
@@ -10,13 +12,43 @@ form.addEventListener("submit", (event) => {
    checkForm();
 })
 
-email.addEventListener("blur", () => {
-    checkInputEmail();
+firstName.addEventListener("blur", () => {
+    checkInputFirstName();
+})
+
+lastName.addEventListener("blur", () => {
+    checkInputLastName();
 })
 
 username.addEventListener("blur", () => {
     checkInputUsername();
 })
+
+email.addEventListener("blur", () => {
+    checkInputEmail();
+})
+
+
+function checkInputFirstName(){
+    const firstNameValue = firstName.value;
+
+    if(firstNameValue === ""){
+        errorInput(firstName, "First name is required!")
+    }else{
+        const formItem = firstName.parentElement;
+        formItem.className = "form-content"
+    }
+}
+function checkInputLastName(){
+    const lastNameValue = lastName.value;
+
+    if(lastNameValue === ""){
+        errorInput(lastName, "Last name is required!")
+    }else{
+        const formItem = lastName.parentElement;
+        formItem.className = "form-content"
+    }
+}
 
 function checkInputUsername(){
     const usernameValue = username.value;
@@ -68,6 +100,8 @@ function checkInputPasswordConfirmation(){
 }
 
 function checkForm(){
+    checkInputFirstName();
+    checkInputLastName();
     checkInputUsername();
     checkInputEmail();
     checkInputPassword();
@@ -81,7 +115,6 @@ function checkForm(){
     if(isValid){
         alert("Successfully submitted")
     }
-    console.log(isValid);
 }
 
 function errorInput(input, message){
