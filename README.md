@@ -67,6 +67,3 @@ If the field is empty, it is highlighted in red and an error message is displaye
 ![tela4](./assets/img/form4.png)
 ![tela5](./assets/img/form5.png)
 
-## Confira o projeto / Check the project
-
- <https://matsushitatomio.github.io/Form/>
